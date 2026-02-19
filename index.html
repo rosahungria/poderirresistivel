@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poder Irresistível — Método Cleópatra | Rosa Hungria</title>
+<meta name="description" content="43 aulas em áudio imersivo. O método que desperta presença magnética, autoridade feminina e o poder de nunca mais ser esquecida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET & BASE ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --preto:     #080808;
+  --preto-alt: #0e0e0e;
+  --preto-card:#121212;
+  --ouro:      #c9a84c;
+  --ouro-claro:#e8c97a;
+  --ouro-pale: #f5e6c0;
+  --ouro-dim:  #7a6128;
+  --branco:    #f8f4ee;
+  --cinza:     #a09080;
+  --cinza-esc: #5a5040;
+  --borda:     rgba(201,168,76,0.20);
+  --borda-forte: rgba(201,168,76,0.50);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--preto);
+  color: var(--branco);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* ─── GRAIN TEXTURE ─────────────────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.6;
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.15); }
+  50%       { box-shadow: 0 0 40px rgba(201,168,76,0.30); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes lineDraw {
+  from { width: 0; }
+  to   { width: 80px; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+.fade-up  { animation: fadeUp  0.9s ease both; }
+.fade-in  { animation: fadeIn  1.2s ease both; }
+.d1 { animation-delay: 0.1s; }
+.d2 { animation-delay: 0.25s; }
+.d3 { animation-delay: 0.4s; }
+.d4 { animation-delay: 0.55s; }
+.d5 { animation-delay: 0.7s; }
+.d6 { animation-delay: 0.85s; }
+
+/* ─── SCROLL REVEAL ─────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── CUSTOM SCROLLBAR ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--preto); }
+::-webkit-scrollbar-thumb { background: var(--ouro-dim); border-radius: 2px; }
+
+/* ─── HEADER / NAV ───────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.95), transparent);
+  backdrop-filter: blur(2px);
+}
+
+.nav-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: var(--ouro);
+  text-transform: uppercase;
+}
+
+.nav-cta {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--preto);
+  background: var(--ouro);
+  padding: 10px 22px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.nav-cta:hover {
+  background: var(--ouro-claro);
+  transform: translateY(-1px);
+}
+
+/* ─── HERO ───────────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 5% 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-bottom: 32px;
+}
+
+.hero-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--branco);
+  margin-bottom: 0;
+}
+
+.hero-titulo em {
+  font-style: italic;
+  color: var(--ouro-claro);
+}
+
+.hero-titulo .gold-line {
+  display: block;
+  background: linear-gradient(90deg, var(--ouro-dim), var(--ouro-claro), var(--ouro), var(--ouro-claro), var(--ouro-dim));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.hero-linha {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--ouro), transparent);
+  margin: 36px auto;
+}
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cinza);
+  max-width: 640px;
+  line-height: 1.65;
+  margin-bottom: 52px;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  border: 1px solid var(--borda-forte);
+  padding: 8px 18px;
+  background: rgba(201,168,76,0.04);
+}
+
+/* ─── BOTÃO PRINCIPAL ───────────────────────────────────────────────── */
+.btn-principal {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--preto);
+  background: linear-gradient(135deg, var(--ouro-dim), var(--ouro), var(--ouro-claro), var(--ouro));
+  padding: 20px 52px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  animation: glowPulse 3s ease infinite;
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+.btn-principal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+.btn-principal:hover::before { left: 100%; }
+.btn-principal:hover {
+  transform: translateY(-2px);
+  letter-spacing: 0.35em;
+}
+
+.btn-garantia {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--cinza);
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ─── SECTION BASE ───────────────────────────────────────────────────── */
+section {
+  padding: 100px 5%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-full {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.section-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--branco);
+  margin-bottom: 24px;
+}
+
+.section-titulo em {
+  font-style: italic;
+  color: var(--ouro-claro);
+}
+
+.section-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--cinza);
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+/* ─── DIVISOR ─────────────────────────────────────────────────────────── */
+.divisor {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ouro-dim), transparent);
+  margin: 0;
+}
+
+/* ─── SECÇÃO DOR ─────────────────────────────────────────────────────── */
+.dor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 64px;
+  border: 1px solid var(--borda);
+}
+
+.dor-item {
+  padding: 40px 36px;
+  background: var(--preto-card);
+  border: 1px solid var(--borda);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+.dor-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--ouro);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+.dor-item:hover { background: rgba(201,168,76,0.03); }
+.dor-item:hover::before { transform: scaleY(1); }
+
+.dor-numero {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: rgba(201,168,76,0.08);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.dor-texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--branco);
+  line-height: 1.5;
+}
+
+/* ─── CITAÇÃO CENTRAL ───────────────────────────────────────────────── */
+.citacao-wrap {
+  background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 50%, rgba(201,168,76,0.03) 100%);
+  border: 1px solid var(--borda);
+  padding: 80px 10%;
+  text-align: center;
+  position: relative;
+}
+.citacao-wrap::before,
+.citacao-wrap::after {
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12rem;
+  color: rgba(201,168,76,0.08);
+  position: absolute;
+  line-height: 1;
+  font-weight: 300;
+}
+.citacao-wrap::before { top: -20px; left: 5%; }
+.citacao-wrap::after  { bottom: -60px; right: 5%; }
+
+.citacao-texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--branco);
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.citacao-texto em {
+  color: var(--ouro-claro);
+  font-style: normal;
+}
+
+/* ─── SOBRE O MÉTODO ─────────────────────────────────────────────────── */
+.metodo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin-top: 64px;
+}
+
+.metodo-card {
+  background: var(--preto-card);
+  border: 1px solid var(--borda);
+  padding: 48px 32px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.metodo-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+.metodo-card:hover::after { transform: scaleX(1); }
+.metodo-card:hover { background: rgba(201,168,76,0.04); }
+
+.metodo-icon {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  display: block;
+  animation: float 4s ease-in-out infinite;
+}
+.metodo-card:nth-child(2) .metodo-icon { animation-delay: 1.3s; }
+.metodo-card:nth-child(3) .metodo-icon { animation-delay: 2.6s; }
+
+.metodo-nome {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-bottom: 16px;
+}
+
+.metodo-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--cinza);
+  line-height: 1.8;
+}
+
+/* ─── O QUE VOCÊ RECEBE ──────────────────────────────────────────────── */
+.modulos-wrap {
+  margin-top: 64px;
+}
+
+.modulo-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  border: 1px solid var(--borda);
+  margin-bottom: 2px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.modulo-item:hover { border-color: var(--borda-forte); }
+.modulo-item:hover .modulo-num { background: var(--ouro); color: var(--preto); }
+
+.modulo-num {
+  background: rgba(201,168,76,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--ouro);
+  transition: all 0.3s ease;
+  min-height: 90px;
+}
+
+.modulo-corpo {
+  padding: 24px 32px;
+  border-left: 1px solid var(--borda);
+}
+
+.modulo-emoji {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.modulo-nome {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-bottom: 8px;
+}
+
+.modulo-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--branco);
+  margin-bottom: 8px;
+}
+
+.modulo-aulas {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--cinza);
+  letter-spacing: 0.05em;
+}
+
+/* ─── NÚMEROS IMPACTO ────────────────────────────────────────────────── */
+.numeros-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--borda);
+  margin-top: 64px;
+}
+
+.numero-item {
+  padding: 52px 24px;
+  text-align: center;
+  border-right: 1px solid var(--borda);
+  position: relative;
+  overflow: hidden;
+}
+.numero-item:last-child { border-right: none; }
+.numero-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 40px; height: 2px;
+  background: var(--ouro);
+}
+
+.numero-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 300;
+  color: var(--ouro-claro);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.numero-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cinza);
+}
+
+/* ─── DEPOIMENTOS ────────────────────────────────────────────────────── */
+.depo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin-top: 64px;
+}
+
+.depo-card {
+  background: var(--preto-card);
+  border: 1px solid var(--borda);
+  padding: 44px 32px;
+  position: relative;
+}
+.depo-card::before {
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: rgba(201,168,76,0.15);
+  position: absolute;
+  top: 12px; left: 24px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.depo-texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--branco);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  padding-top: 32px;
+}
+
+.depo-autor {
+  border-top: 1px solid var(--borda);
+  padding-top: 20px;
+}
+
+.depo-nome {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-bottom: 4px;
+}
+
+.depo-cargo {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--cinza);
+}
+
+.depo-estrelas {
+  color: var(--ouro);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+/* ─── PARA QUEM É ─────────────────────────────────────────────────────── */
+.paraquem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 64px;
+}
+
+.paraquem-col {
+  background: var(--preto-card);
+  border: 1px solid var(--borda);
+  padding: 48px 40px;
+}
+
+.paraquem-header {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.sim .paraquem-header { color: var(--ouro); }
+.nao .paraquem-header { color: var(--cinza-esc); }
+
+.paraquem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--branco);
+  line-height: 1.6;
+}
+
+.paraquem-icon {
+  font-size: 0.9rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.sim .paraquem-icon { color: var(--ouro); }
+.nao .paraquem-icon { color: var(--cinza-esc); }
+.nao .paraquem-item { color: var(--cinza); }
+
+/* ─── OFERTA / PREÇO ─────────────────────────────────────────────────── */
+.oferta-wrap {
+  background: linear-gradient(135deg, var(--preto-card) 0%, rgba(201,168,76,0.06) 50%, var(--preto-card) 100%);
+  border: 1px solid var(--borda-forte);
+  padding: 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 64px;
+}
+.oferta-wrap::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 15%; right: 15%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+}
+.oferta-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 15%; right: 15%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+}
+
+.oferta-tag {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--preto);
+  background: var(--ouro);
+  padding: 8px 24px;
+  margin-bottom: 36px;
+}
+
+.oferta-de {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--cinza);
+  text-decoration: line-through;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.oferta-por {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 300;
+  color: var(--ouro-claro);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.oferta-parcela {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--cinza);
+  margin-bottom: 48px;
+}
+
+.oferta-inclui {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 440px;
+  margin: 0 auto 48px;
+  text-align: left;
+}
+
+.oferta-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--branco);
+}
+
+.oferta-check {
+  width: 20px; height: 20px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid var(--ouro-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--ouro);
+  flex-shrink: 0;
+}
+
+/* ─── FAQ ─────────────────────────────────────────────────────────────── */
+.faq-lista {
+  margin-top: 64px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--borda);
+  overflow: hidden;
+}
+
+.faq-pergunta {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--branco);
+  gap: 24px;
+  transition: color 0.3s ease;
+}
+.faq-pergunta:hover { color: var(--ouro-claro); }
+
+.faq-seta {
+  font-size: 0.8rem;
+  color: var(--ouro);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.faq-item.aberto .faq-seta { transform: rotate(180deg); }
+
+.faq-resposta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq-item.aberto .faq-resposta {
+  max-height: 300px;
+  padding-bottom: 28px;
+}
+
+.faq-resposta p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--cinza);
+  line-height: 1.8;
+}
+
+/* ─── SOBRE A MENTORA ────────────────────────────────────────────────── */
+.mentora-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 0;
+  border: 1px solid var(--borda);
+  margin-top: 64px;
+  overflow: hidden;
+}
+
+.mentora-visual {
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
+  border-right: 1px solid var(--borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 320px;
+}
+
+.mentora-iniciais {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--ouro);
+  line-height: 1;
+}
+
+.mentora-titulo-card {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--ouro-dim);
+  text-align: center;
+}
+
+.mentora-texto {
+  padding: 60px 56px;
+}
+
+.mentora-nome {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--branco);
+  margin-bottom: 8px;
+}
+
+.mentora-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-bottom: 28px;
+}
+
+.mentora-bio {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--cinza);
+  line-height: 1.9;
+}
+
+/* ─── GARANTIA ───────────────────────────────────────────────────────── */
+.garantia-strip {
+  background: rgba(201,168,76,0.04);
+  border: 1px solid var(--borda);
+  border-left: 3px solid var(--ouro);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-top: 48px;
+}
+
+.garantia-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.garantia-titulo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-bottom: 10px;
+}
+
+.garantia-texto {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--cinza);
+  line-height: 1.7;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--borda);
+  padding: 48px 5%;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  color: var(--ouro);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-linha {
+  width: 60px;
+  height: 1px;
+  background: var(--ouro-dim);
+  margin: 0 auto 20px;
+}
+
+.footer-texto {
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--cinza-esc);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+/* ─── STICKY CTA ─────────────────────────────────────────────────────── */
+.sticky-cta {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--preto);
+  border-top: 1px solid var(--borda-forte);
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.sticky-cta.visivel { transform: translateY(0); }
+
+.sticky-texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--cinza);
+}
+
+.sticky-preco {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--ouro-claro);
+  margin: 0 24px;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .dor-grid         { grid-template-columns: 1fr; }
+  .metodo-grid      { grid-template-columns: 1fr; }
+  .numeros-grid     { grid-template-columns: 1fr 1fr; }
+  .depo-grid        { grid-template-columns: 1fr; }
+  .paraquem-grid    { grid-template-columns: 1fr; }
+  .mentora-grid     { grid-template-columns: 1fr; }
+  .mentora-visual   { border-right: none; border-bottom: 1px solid var(--borda); min-height: 200px; }
+  .mentora-texto    { padding: 40px 32px; }
+  .oferta-wrap      { padding: 52px 24px; }
+  .garantia-strip   { flex-direction: column; text-align: center; padding: 36px 24px; }
+  .sticky-cta       { flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .sticky-texto     { font-size: 0.85rem; }
+  nav               { padding: 16px 5%; }
+  .modulo-item      { grid-template-columns: 60px 1fr; }
+  .modulo-corpo     { padding: 20px 20px; }
+}
+
+@media (max-width: 600px) {
+  .numeros-grid     { grid-template-columns: 1fr 1fr; }
+  .hero-badges      { gap: 10px; }
+  .badge            { font-size: 0.55rem; padding: 6px 12px; }
+  section           { padding: 72px 5%; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="fade-in d1">
+  <div class="nav-logo">Poder Irresistível</div>
+  <a href="https://pay.kiwify.com.br/2SGmIfe" class="nav-cta">Quero Acesso</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-eyebrow fade-up d1">Rosa Hungria — Método Cleópatra</p>
+
+  <h1 class="hero-titulo">
+    <span class="fade-up d2">Você não entra.</span>
+    <em class="fade-up d3">Você acontece.</em>
+    <span class="gold-line fade-up d4">Poder Irresistível.</span>
+  </h1>
+
+  <div class="hero-linha fade-in d4"></div>
+
+  <p class="hero-sub fade-up d4">
+    43 aulas em áudio imersivo. O método que desperta presença magnética, autoridade feminina e o poder de nunca mais ser esquecida.
+  </p>
+
+  <div class="hero-badges fade-up d5">
+    <span class="badge">43 Aulas</span>
+    <span class="badge">5 Módulos</span>
+    <span class="badge">Áudio Imersivo</span>
+    <span class="badge">251 Slides</span>
+    <span class="badge">Acesso Vitalício</span>
+  </div>
+
+  <a href="https://pay.kiwify.com.br/2SGmIfe" class="btn-principal fade-up d6">
+    Ativar Meu Poder Agora
+  </a>
+  <span class="btn-garantia fade-in d6">7 dias de garantia incondicional &nbsp;·&nbsp; Risco zero</span>
+</header>
+
+<div class="divisor"></div>
+
+<!-- DOR -->
+<section class="reveal">
+  <span class="section-label">O Reconhecimento</span>
+  <h2 class="section-titulo">Você se <em>reconhece</em><br>em algum desses sentimentos?</h2>
+
+  <div class="dor-grid">
+    <div class="dor-item reveal">
+      <div class="dor-numero">01</div>
+      <p class="dor-texto">"Me esforço demais e mesmo assim passo despercebida."</p>
+    </div>
+    <div class="dor-item reveal">
+      <div class="dor-numero">02</div>
+      <p class="dor-texto">"Sou a opção — nunca a prioridade."</p>
+    </div>
+    <div class="dor-item reveal">
+      <div class="dor-numero">03</div>
+      <p class="dor-texto">"Dou tudo de mim e eles parecem não notar."</p>
+    </div>
+    <div class="dor-item reveal">
+      <div class="dor-numero">04</div>
+      <p class="dor-texto">"Quero ser inesquecível. Não sei por onde começar."</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- CITAÇÃO -->
+<section class="section-full reveal" style="padding: 0;">
+  <div class="citacao-wrap">
+    <p class="citacao-texto">
+      Cleópatra não era a mais bonita do Egito.<br>
+      Era a mais <em>inesquecível</em>.<br>
+      E agora você aprende o código dela.
+    </p>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- MÉTODO -->
+<section class="reveal">
+  <span class="section-label">O Método</span>
+  <h2 class="section-titulo">Três forças que<br>transformam como o mundo <em>te sente</em></h2>
+  <p class="section-sub">O Poder Irresistível não ensina a ser desejada. Ensina a não se perder para ser escolhida.</p>
+
+  <div class="metodo-grid">
+    <div class="metodo-card reveal">
+      <span class="metodo-icon">👁️</span>
+      <div class="metodo-nome">Magnetismo Silencioso</div>
+      <p class="metodo-desc">Presença que dispensa palavras. Você aprende a entrar em qualquer ambiente e fazer o campo se ajustar a você — antes de abrir a boca.</p>
+    </div>
+    <div class="metodo-card reveal">
+      <span class="metodo-icon">⚖️</span>
+      <div class="metodo-nome">Psicologia da Escassez</div>
+      <p class="metodo-desc">A dinâmica que transforma você de opção em prioridade. Não é jogar difícil — é ter uma vida real acontecendo e deixar isso ser visto.</p>
+    </div>
+    <div class="metodo-card reveal">
+      <span class="metodo-icon">👑</span>
+      <div class="metodo-nome">Autoridade Feminina</div>
+      <p class="metodo-desc">Retome a soberania em qualquer relação. O poder que não grita, não pede, não corre. Ele conduz — e o outro segue sem perceber que seguiu.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- NÚMEROS -->
+<section class="reveal">
+  <div class="numeros-grid">
+    <div class="numero-item">
+      <div class="numero-val">43</div>
+      <div class="numero-label">Aulas em Áudio</div>
+    </div>
+    <div class="numero-item">
+      <div class="numero-val">5</div>
+      <div class="numero-label">Módulos Completos</div>
+    </div>
+    <div class="numero-item">
+      <div class="numero-val">251</div>
+      <div class="numero-label">Slides de Suporte</div>
+    </div>
+    <div class="numero-item">
+      <div class="numero-val">∞</div>
+      <div class="numero-label">Acesso Vitalício</div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="reveal">
+  <span class="section-label">O Conteúdo</span>
+  <h2 class="section-titulo">Tudo que está<br>dentro do <em>Poder Irresistível</em></h2>
+
+  <div class="modulos-wrap">
+    <div class="modulo-item reveal">
+      <div class="modulo-num">I</div>
+      <div class="modulo-corpo">
+        <div class="modulo-nome"><span class="modulo-emoji">🖤</span>Módulo 1</div>
+        <div class="modulo-titulo">O Código de Cleópatra</div>
+        <div class="modulo-aulas">9 aulas — A presença que antecede qualquer palavra. Magnetismo, algoritmo humano, arquitetura do fascínio.</div>
+      </div>
+    </div>
+
+    <div class="modulo-item reveal">
+      <div class="modulo-num">II</div>
+      <div class="modulo-corpo">
+        <div class="modulo-nome"><span class="modulo-emoji">🔥</span>Módulo 2</div>
+        <div class="modulo-titulo">A Arte da Conquista Intencional</div>
+        <div class="modulo-aulas">11 aulas — Mente masculina, escassez feminina, linguagem magnética, dominância suave, reverência.</div>
+      </div>
+    </div>
+
+    <div class="modulo-item reveal">
+      <div class="modulo-num">III</div>
+      <div class="modulo-corpo">
+        <div class="modulo-nome"><span class="modulo-emoji">💋</span>Módulo 3</div>
+        <div class="modulo-titulo">A Arquitetura do Desejo</div>
+        <div class="modulo-aulas">8 aulas — Energia sexual consciente, tensão antes do toque, como ser inesquecível sem performance.</div>
+      </div>
+    </div>
+
+    <div class="modulo-item reveal">
+      <div class="modulo-num">IV</div>
+      <div class="modulo-corpo">
+        <div class="modulo-nome"><span class="modulo-emoji">🥂</span>Módulo 4</div>
+        <div class="modulo-titulo">O Encontro de Elite</div>
+        <div class="modulo-aulas">8 aulas práticas — Do convite à saída estratégica. Como dominar qualquer ambiente social com presença e autoridade.</div>
+      </div>
+    </div>
+
+    <div class="modulo-item reveal">
+      <div class="modulo-num">V</div>
+      <div class="modulo-corpo">
+        <div class="modulo-nome"><span class="modulo-emoji">🌙</span>Módulo 5</div>
+        <div class="modulo-titulo">Protocolo Íntimo</div>
+        <div class="modulo-aulas">8 aulas — A experiência transcendental. Presença, voz, toque e o Selo de Inesquecível que nenhum homem apaga.</div>
+      </div>
+    </div>
+
+    <div class="modulo-item reveal">
+      <div class="modulo-num">＋</div>
+      <div class="modulo-corpo">
+        <div class="modulo-nome"><span class="modulo-emoji">📖</span>Bônus Incluído</div>
+        <div class="modulo-titulo">eBook Completo — 251 Páginas</div>
+        <div class="modulo-aulas">O mapa completo do método em PDF. Checklists de consulta rápida para revisar antes de qualquer encontro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- DEPOIMENTOS -->
+<section class="reveal">
+  <span class="section-label">Resultados</span>
+  <h2 class="section-titulo">O que mulheres<br>estão <em>sentindo</em></h2>
+
+  <div class="depo-grid">
+    <div class="depo-card reveal">
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-texto">"Mudou completamente minha forma de me relacionar. Agora sou eu quem escolhe — não mais a que implora. Apliquei o Olhar de Dois Tempos e ele me procurou no dia seguinte."</p>
+      <div class="depo-autor">
+        <div class="depo-nome">Mariana S.</div>
+        <div class="depo-cargo">Empresária, 34 anos</div>
+      </div>
+    </div>
+    <div class="depo-card reveal">
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-texto">"O Módulo 4 sozinho já valeu o investimento inteiro. Entrei no jantar do jeito que a Rosa ensina e ele ficou me olhando diferente a noite toda. Parei de me explicar."</p>
+      <div class="depo-autor">
+        <div class="depo-nome">Ana Paula M.</div>
+        <div class="depo-cargo">Psicóloga, 41 anos</div>
+      </div>
+    </div>
+    <div class="depo-card reveal">
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-texto">"O áudio imersivo é diferente de tudo que já consumi. Ouço enquanto dirijo, enquanto me arrumou. Em 3 dias percebi mudanças reais na forma como as pessoas me tratam."</p>
+      <div class="depo-autor">
+        <div class="depo-nome">Juliana L.</div>
+        <div class="depo-cargo">Coach, 38 anos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- PARA QUEM É -->
+<section class="reveal">
+  <span class="section-label">O Filtro</span>
+  <h2 class="section-titulo">Este método<br>é <em>para você</em> se...</h2>
+
+  <div class="paraquem-grid">
+    <div class="paraquem-col sim reveal">
+      <div class="paraquem-header">✦ &nbsp;É para você</div>
+      <div class="paraquem-item"><span class="paraquem-icon">◆</span><span>Quer ser notada sem precisar dizer uma única palavra</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">◆</span><span>Deseja criar tensão e desejo antes mesmo do primeiro toque</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">◆</span><span>Cansou de ser a mulher boazinha e quer ser a mulher marcante</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">◆</span><span>Quer dominar o encontro social e a intimidade com elegância</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">◆</span><span>Está pronta para parar de correr e começar a atrair</span></div>
+    </div>
+    <div class="paraquem-col nao reveal">
+      <div class="paraquem-header">✕ &nbsp;Não é para você</div>
+      <div class="paraquem-item"><span class="paraquem-icon">✕</span><span>Quer continuar correndo atrás de homens e implorar atenção</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">✕</span><span>Prefere técnicas de manipulação sem trabalho interno</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">✕</span><span>Aceita migalhas e se conforma com menos do que merece</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">✕</span><span>Quer mudar os outros em vez de se transformar</span></div>
+      <div class="paraquem-item"><span class="paraquem-icon">✕</span><span>Não está disposta a ocupar o espaço que é seu</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- OFERTA -->
+<section class="reveal">
+  <span class="section-label">A Oferta</span>
+  <h2 class="section-titulo">Comece sua<br><em>transformação</em> hoje</h2>
+
+  <div class="oferta-wrap reveal">
+    <span class="oferta-tag">Preço de Lançamento</span>
+
+    <p class="oferta-de">De R$ 497,00</p>
+    <p class="oferta-por">R$ 97</p>
+    <p class="oferta-parcela">ou 12x de R$ 9,74 no cartão</p>
+
+    <div class="oferta-inclui">
+      <div class="oferta-item"><div class="oferta-check">✓</div><span>43 aulas em áudio imersivo com música de fundo</span></div>
+      <div class="oferta-item"><div class="oferta-check">✓</div><span>251 slides de suporte visual para cada módulo</span></div>
+      <div class="oferta-item"><div class="oferta-check">✓</div><span>eBook completo em PDF — 251 páginas do método</span></div>
+      <div class="oferta-item"><div class="oferta-check">✓</div><span>Checklists de consulta rápida (Módulos 4 e 5)</span></div>
+      <div class="oferta-item"><div class="oferta-check">✓</div><span>Acesso vitalício — ouça quando e onde quiser</span></div>
+      <div class="oferta-item"><div class="oferta-check">✓</div><span>Garantia incondicional de 7 dias</span></div>
+    </div>
+
+    <a href="https://pay.kiwify.com.br/2SGmIfe" class="btn-principal" style="font-size: 0.8rem; padding: 22px 64px;">
+      Quero Me Tornar Inesquecível
+    </a>
+    <span class="btn-garantia" style="margin-top: 20px; display: block;">
+      Pagamento 100% seguro via Kiwify &nbsp;·&nbsp; Acesso imediato após confirmação
+    </span>
+
+    <div class="garantia-strip" style="margin-top: 40px; text-align: left;">
+      <div class="garantia-icon">🛡️</div>
+      <div>
+        <div class="garantia-titulo">Garantia Incondicional de 7 Dias</div>
+        <p class="garantia-texto">Se em 7 dias você não sentir que esse método mudou sua percepção sobre sua própria presença, devolvemos cada centavo. Sem perguntas. Risco zero é nosso, não seu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- MENTORA -->
+<section class="reveal">
+  <span class="section-label">A Mentora</span>
+  <h2 class="section-titulo">Quem está<br>por trás do <em>método</em></h2>
+
+  <div class="mentora-grid">
+    <div class="mentora-visual">
+      <div class="mentora-iniciais">RH</div>
+      <div class="mentora-titulo-card">Rosa Hungria</div>
+    </div>
+    <div class="mentora-texto">
+      <div class="mentora-nome">Rosa Hungria</div>
+      <div class="mentora-sub">Estrategista de Magnetismo Feminino · Criadora do Método Cleópatra</div>
+      <p class="mentora-bio">
+        Rosa Hungria dedicou anos a entender o que diferencia a mulher que é lembrada da mulher que é esquecida. Não é a beleza. Não é a perfeição. É a consciência — e o método que nasce dela.<br><br>
+        Criadora do Método Cleópatra, Rosa ensina que o verdadeiro poder feminino não grita, não pede, não corre. Ele conduz. Através de 43 aulas em áudio imersivo, ela entrega o código que devolve às mulheres a soberania que sempre foi delas.<br><br>
+        Sua missão: devolver o trono às mulheres que se perderam tentando agradar o mundo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- FAQ -->
+<section class="reveal">
+  <span class="section-label">Dúvidas</span>
+  <h2 class="section-titulo">Perguntas<br><em>frequentes</em></h2>
+
+  <div class="faq-lista">
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Como recebo o acesso ao curso?
+        <span class="faq-seta">▾</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Após a confirmação do pagamento, você recebe um e-mail com suas credenciais de acesso imediatamente. O conteúdo fica disponível na plataforma da Kiwify, onde você acessa pelo celular, tablet ou computador.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        O conteúdo é em vídeo ou áudio?
+        <span class="faq-seta">▾</span>
+      </button>
+      <div class="faq-resposta">
+        <p>O Poder Irresistível é uma experiência em áudio imersivo — cada aula é narrada com voz profissional e música de fundo cuidadosamente selecionada. Você recebe também os slides em PDF para acompanhar visualmente e o eBook completo de 251 páginas. Ideal para ouvir enquanto dirige, se arruma ou pratica a rotina.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Funciona para mulheres casadas ou em relacionamentos?
+        <span class="faq-seta">▾</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Sim — e especialmente para elas. O método não é sobre conquistar um homem novo. É sobre recuperar sua autoridade, seu mistério e sua presença dentro de qualquer relação. Mulheres casadas reportam mudanças profundas na dinâmica do relacionamento ao aplicar as técnicas dos Módulos 4 e 5.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Funciona para mulheres mais velhas?
+        <span class="faq-seta">▾</span>
+      </button>
+      <div class="faq-resposta">
+        <p>O magnetismo feminino não tem prazo de validade. O método foi construído para mulheres entre 28 e 55 anos — especialmente as que estão em um momento de reconstrução ou expansão. Presença, autoridade e energia sexual consciente são atributos que se aprofundam com a maturidade.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Por quanto tempo tenho acesso?
+        <span class="faq-seta">▾</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Acesso vitalício. Uma vez dentro, o conteúdo é seu para sempre — incluindo eventuais atualizações futuras. Você pode ouvir as aulas quantas vezes quiser, no ritmo que preferir.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        E se eu não gostar?
+        <span class="faq-seta">▾</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Você tem 7 dias de garantia incondicional. Se dentro desse período sentir que o método não é para você, basta solicitar o reembolso e devolveremos 100% do valor pago. Sem questionamentos, sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- CTA FINAL -->
+<section class="reveal" style="text-align: center; padding-top: 80px; padding-bottom: 120px;">
+  <span class="section-label">O Convite</span>
+  <h2 class="section-titulo" style="margin: 0 auto 24px; max-width: 700px;">
+    A mulher que se reconhece<br>não se perde mais tentando<br>ser <em>escolhida</em>
+  </h2>
+  <p class="section-sub" style="margin: 0 auto 52px;">
+    Você tem o método nas mãos. 43 aulas. Áudio imersivo. A presença que antecede qualquer palavra. Comece hoje.
+  </p>
+  <a href="https://pay.kiwify.com.br/2SGmIfe" class="btn-principal" style="font-size: 0.82rem; padding: 24px 72px;">
+    Ativar o Poder Irresistível
+  </a>
+  <span class="btn-garantia" style="margin-top: 18px; display: block;">
+    R$ 97,00 · Acesso imediato · 7 dias de garantia
+  </span>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Poder Irresistível</div>
+  <div class="footer-linha"></div>
+  <p class="footer-texto">
+    © 2026 Rosa Hungria — Método Cleópatra da Atualidade<br>
+    Todos os direitos reservados<br><br>
+    Este produto é comercializado com apoio da plataforma Kiwify.<br>
+    A Kiwify atua como intermediadora dos pagamentos e não é responsável pelo conteúdo do produto.
+  </p>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="sticky-texto">Poder Irresistível — 43 aulas em áudio imersivo</span>
+  <span class="sticky-preco">R$ 97</span>
+  <a href="https://pay.kiwify.com.br/2SGmIfe" class="btn-principal" style="font-size: 0.65rem; padding: 14px 28px; animation: none;">
+    Garantir Acesso
+  </a>
+</div>
+
+<script>
+// ─── SCROLL REVEAL ───────────────────────────────────────────────────────────
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// ─── STICKY CTA ───────────────────────────────────────────────────────────────
+const stickyCta = document.getElementById('stickyCta');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY > 600) {
+    stickyCta.classList.add('visivel');
+  } else {
+    stickyCta.classList.remove('visivel');
+  }
+  lastScroll = scrollY;
+});
+
+// ─── FAQ TOGGLE ───────────────────────────────────────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('aberto');
+  
+  // Fecha todos
+  document.querySelectorAll('.faq-item.aberto').forEach(i => i.classList.remove('aberto'));
+  
+  // Abre o clicado (se estava fechado)
+  if (!isOpen) item.classList.add('aberto');
+}
+</script>
+
+</body>
+</html>
